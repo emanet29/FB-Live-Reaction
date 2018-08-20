@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="key" translatesAutoresizingMaskIntoConstraints="NO" id="alP-xG-ZH5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="346"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Twr-b2-IA9">
-                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                <rect key="frame" x="0.0" y="346" width="375" height="321"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="l0k-Vd-A0B">
-                                        <rect key="frame" x="72.5" y="233.5" width="230" height="60"/>
+                                        <rect key="frame" x="72.5" y="221" width="230" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Szh-1V-TL0">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -75,7 +75,7 @@
                             <constraint firstItem="Twr-b2-IA9" firstAttribute="top" secondItem="alP-xG-ZH5" secondAttribute="bottom" id="8Hr-97-urK"/>
                             <constraint firstItem="Twr-b2-IA9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FtK-dH-UFU"/>
                             <constraint firstItem="Twr-b2-IA9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="LeY-db-673"/>
-                            <constraint firstItem="Twr-b2-IA9" firstAttribute="height" secondItem="alP-xG-ZH5" secondAttribute="height" id="bqV-Bd-B6R"/>
+                            <constraint firstItem="Twr-b2-IA9" firstAttribute="height" secondItem="alP-xG-ZH5" secondAttribute="height" constant="-25" id="bqV-Bd-B6R"/>
                             <constraint firstItem="alP-xG-ZH5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fiq-BK-VEw"/>
                             <constraint firstItem="alP-xG-ZH5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jEb-Er-RIL"/>
                             <constraint firstItem="Twr-b2-IA9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qFs-id-bwO"/>
