@@ -17,12 +17,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         //vueBezier = Bezier(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         //view.addSubview(vueBezier)
-        reacIV = ReactionIV(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        view.addSubview(reacIV!)
+        //reacIV = ReactionIV(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        //view.addSubview(reacIV!)
     }
 
     @IBAction func reactionDuBouton(_ sender: Any) {
-        
+        guard let button = sender as? UIButton else { return }
+        let al = aleatoire(max: 20)
+        reacIV = ReactionIV(frame: CGRect(x: 0, y: 0, width: 30 + al, height: 30 + al))
+        reacIV?.imageTag = button.tag
+        view.addSubview(reacIV!)
         
         
     }

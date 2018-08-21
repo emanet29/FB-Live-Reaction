@@ -12,14 +12,22 @@ class ReactionIV: UIImageView, CAAnimationDelegate {
     
     var images = [#imageLiteral(resourceName: "thumb"), #imageLiteral(resourceName: "heart"), #imageLiteral(resourceName: "sad")]
     
+    var imageTag: Int? {
+        didSet {
+            guard let img = imageTag else { return }
+            image = images[img]
+            layer.add(animation(), forKey: nil)
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
+        //setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
+        //setup()
     }
     
     func setup() {
@@ -30,7 +38,9 @@ class ReactionIV: UIImageView, CAAnimationDelegate {
     func animation() -> CAKeyframeAnimation {
         let anim = CAKeyframeAnimation(keyPath: "position")
         anim.path = ligneCourbe().cgPath
-        anim.duration = 2
+        
+        let centiemes = Double(aleatoire(max: 100)) / 100
+        anim.duration = 1 + centiemes
         anim.fillMode = kCAFillModeForwards
         anim.isRemovedOnCompletion = false
         anim.delegate = self
@@ -44,8 +54,8 @@ class ReactionIV: UIImageView, CAAnimationDelegate {
         let tiers = vue.width / 3
         let depart = CGPoint(x: vue.width, y: milieu)
         let fin = CGPoint(x: 0, y: milieu)
-        let cp1 = CGPoint(x: tiers * 2, y: milieu - 100)
-        let cp2 = CGPoint(x: tiers, y: milieu + 100)
+        let cp1 = CGPoint(x: tiers * 2, y: milieu - 100 + aleatoire(max: 100))
+        let cp2 = CGPoint(x: tiers, y: milieu + 100 + aleatoire(max: 100))
         
         
         let path = UIBezierPath()
